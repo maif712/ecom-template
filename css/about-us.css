@@ -1,0 +1,13 @@
+
+/* About us */
+.about-us__main {
+    margin-top: var(--global-main-page-gap);
+}
+
+.about-page__img {
+    margin-block: 2rem;
+    border-radius: var(--global-radius);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    width: 100%;
+}
+/* End */
