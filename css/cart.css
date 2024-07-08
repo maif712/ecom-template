@@ -168,6 +168,7 @@
     .actions {
         position: absolute;
         bottom: 0;
+        right: -1px;
         -webkit-transform: translateY(105%);
         transform: translateY(105%);
     }
