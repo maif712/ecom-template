@@ -1,37 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Register</title>
 </head>
+
 <body>
-    
+
     <main class="flex min-h-full flex-col items-center justify-center">
         <div class="register-form-wrapper">
             <h1 class="form__title">ثبت نام</h1>
             <div class="from__des">
                 <span>سلام!</span>
             </div>
-            <form method="post" class="register-form">
+            <form method="post" class="register-form needs-validation">
                 <div class="flex flex-col gap-05">
                     <label for="username">نام کاربری *</label>
-                    <input class="form__input-field" type="text" id="username" required>
+                    <div class="form__input-field-wrapper">
+                        <input class="form__input-field form-input-needs-validation" type="text" id="username">
+                    </div>
+                    <span class="show-form-error">لطفا فیلد مورد نظر را پر کنید</span>
                 </div>
                 <div class="flex flex-col gap-05">
                     <label for="password">رمز عبور *</label>
-                    <input class="form__input-field" type="password" id="password" required>
+                    <div class="form__input-field-wrapper">
+                        <input class="form__input-field form-input-needs-validation" type="password" id="password">
+                    </div>
+                    <span class="show-form-error">لطفا فیلد مورد نظر را پر کنید</span>
                 </div>
                 <div class="flex flex-col gap-05">
                     <label for="city">شهر</label>
-                    <input class="form__input-field" type="text" id="city">
+                    <div class="form__input-field-wrapper">
+                        <input class="form__input-field" type="text" id="city">
+                    </div>
                 </div>
                 <button type="submit" class="form__submit-btn">ثبت نام</button>
             </form>
             <div class="grid gap-05 m-t-3">
                 <div>
-                    <p class="text-center ">حساب کاربری دارید؟ <a class="text-blue-400" href="/login.html">ورود به حساب کاربردی</a></p>
+                    <p class="text-center ">حساب کاربری دارید؟ <a class="text-blue-400" href="/login.html">ورود به حساب
+                            کاربری</a></p>
                 </div>
                 <p class="text-center">
                     ورود شما به معنای پذیرش <a class="text-blue-400" href="#">شرایط سایت</a> و قوانین حریم‌ خصوصی است
@@ -39,6 +50,8 @@
             </div>
         </div>
     </main>
-    <!-- <script src="./app.js"></script> -->
+
+    <script src="./js/formValidation.js"></script>
 </body>
+
 </html>
