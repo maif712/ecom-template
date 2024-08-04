@@ -430,8 +430,17 @@ tr:last-child td:last-child {
     grid-column: span 2;
 }
 
+.display-none {
+    display: none;
+}
+
 .text-center {
     text-align: center;
+}
+
+/* position */
+.relative {
+    position: relative;
 }
 
 /* screen */
@@ -855,6 +864,7 @@ tr:last-child td:last-child {
 
 .add-to-card-btn span {
     display: none;
+    pointer-events: none;
 }
 
 .add-to-card-btn:hover {
@@ -865,6 +875,11 @@ tr:last-child td:last-child {
 .add-to-icon {
     width: var(--global-icon-size);
     height: var(--global-icon-size);
+    pointer-events: none;
+}
+
+.add-to-icon > svg {
+    pointer-events: none;
 }
 
 .featured-product__figure {
@@ -1359,6 +1374,7 @@ tr:last-child td:last-child {
     .add-to-icon {
         display: none;
     }
+
 
     .featured-product__thumbnail:hover .add-to-card-btn {
         -webkit-transform: none;

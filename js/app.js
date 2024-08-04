@@ -39,6 +39,20 @@ navSubMenuBtn.forEach(button => {
     })
 })
 
+// Expand user actions
+const userProfileBtn = document.querySelector(".user-profile-btn")
+const userActionsDiv = document.querySelector(".user-actions")
+userProfileBtn.addEventListener("click", () => {
+    const isExpanded = userActionsDiv.getAttribute("aria-expanded")
+    isExpanded == "false" ? userActionsDiv.setAttribute("aria-expanded", true) : userActionsDiv.setAttribute("aria-expanded", false)
+})
+// --close the use action tab
+userActionsDiv.addEventListener("click", (e) => {
+    userActionsDiv.setAttribute("aria-expanded", false)
+})
+// --end
+// End
+
 // Sticky navigation bar
 const mainHeader = document.querySelector("header")
 // window.addEventListener("scroll", () => {
@@ -105,7 +119,7 @@ multipleElementObserver(memeberCards, 120, "fadeInRight", "animated")
 addAnimationDelay(memeberCards, 0.18)
 // End
 
-// Single page ative tab panel
+// Single page active tab panel -- desctiption and comments
 const tabBtn = document.querySelectorAll(".single-page__tabs-btn")
 const tabs = document.querySelectorAll(".single-page__tab li")
 const tabPanels = document.querySelectorAll(".single-page__tabs-panel")
@@ -141,7 +155,23 @@ tabBtn.forEach(btn => {
 })
 // End
 
-// Sorting list active nav 
+
+// Add active class for current active navigation
+document.addEventListener("DOMContentLoaded", () => {
+    const allNavLinks = document.querySelectorAll(".nav__main")
+    const currentLocation = window.location.href
+    const rootLocation = `${window.location.origin}/`
+
+    allNavLinks.forEach(link => {
+        if(link.href == currentLocation || link.href == `${rootLocation}index.html` && currentLocation == rootLocation) {
+            link.classList.add("active")
+        }
+         
+    })
+})
+// End
+
+// Sorting list active nav -- category page
 const sorts = document.querySelectorAll(".sorting__span-text")
 sorts.forEach(sort => {
     sort.addEventListener("click", (e) => {
